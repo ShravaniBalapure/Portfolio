@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none; margin-right: auto;">
+            <h1 style="color: red; font-family: 'Times New Roman', Times, serif; margin: 0; transition: color 0.3s;">Shravani</h1>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Portfolio</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+        </nav>
+        <a href="contact.html" class="contact">Contact Me</a>
+    </header>
+
+    <br><br>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hi</h3>
+            <h1>I'm <span>Shravani<br></span>a Developer</h1>
+            <p>I'm Shravani Balapure, a third-year engineering student at Sipna College of Engineering and Technology, Amravati, with a strong interest in software development and problem-solving. I specialize in full stack web development, including Node.js, React, Django, MySQL, and MongoDB. I enjoy exploring new technologies and building innovative applications that solve real-world challenges. With experience in hackathons and various technical projects, I am always looking for opportunities to expand my skills and create impactful solutions.</p>
+        </div> 
+        <img src="https://www.uplers.com/wp-content/uploads/2021/12/full-stack-web-developers.png" alt="Full Stack Developer" width="600" height="400"> 
+    </section>
+
+    <section>
+        <div class="btn-box">
+            <a href="hire.html">
+            <button class="btn-1">Hire Me</button></a>
+            <a href="experience.html">
+                <button class="btn-2">Experience</button>
+            </a>
+        </div>
+    </section>
+
+    <br><br>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

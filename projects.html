@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+    
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.884);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+    
+        .projects-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1000px;
+            margin: 80px auto; /* Centering the container */
+        }
+    
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #333;
+        }
+    
+        .projects-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    
+        .project-item {
+            width: 100%;
+            max-width: 450px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+    
+        .project-item h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+    
+        .project-item p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+    
+        .project-item video, .project-item img {
+            width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+    
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .projects-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <h1 style="color: red; font-family: 'Times New Roman', Times, serif; margin: 0; transition: color 0.3s;">Shravani</h1>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Portfolio</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+        </nav>
+        <a href="contact.html" class="contact">Let’s Connect!</a>
+    </header>
+
+    <div class="projects-container">
+        <h2>Projects</h2>
+    
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <h3>Project 1: BMI Calculator</h3>
+                <p>This project involves creating a voice assistant using Python that can respond to user commands, open applications, fetch data, and interact with APIs. It is designed to help improve productivity and enhance the user experience with voice control features.</p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="bmi_calculator.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="project-item">
+                <h3>Project 2: Random Password Generator</h3>
+                <p>This project is a Python-based application that generates strong, random passwords based on user-selected parameters such as length and inclusion of special characters. It provides both beginner and advanced versions to cater to different user needs.</p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="password_generator.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+    
+            <!-- Project 3 -->
+            <div class="project-item">
+                <h3>Project 3: Cybersecurity Tool</h3>
+                <p>The cybersecurity tool developed for the Rackathon hackathon includes a Metadata Scrubber using the EXIF library to remove sensitive data from images, a Twitter Post Analyzer that detects offensive content with Hugging Face and LLM APIs, and a Twitter Post Generator that uses similar technology for creating posts. Additionally, it features a static blog providing insights into cybersecurity trends and relevance. This project focuses on enhancing online security and user awareness.</p>
+                <div class="video-container">
+                    <img src="https://media.licdn.com/dms/image/v2/D5622AQG6cE9WsBusuQ/feedshare-shrink_800/feedshare-shrink_800/0/1721409988887?e=1731542400&v=beta&t=GqQ12zNfik2w61ra1kbvS6RnL_6lz64KGNmC5EMW5JY" alt="Cybersecurity Tool Screenshot">
+                </div>
+            </div>
+    
+            <!-- Project 4 -->
+            <div class="project-item">
+                <h3>Project 4: Order It</h3>
+                <p>The food ordering web app I built during my Full Stack Web Development Internship at Web Stack Academy streamlines the food ordering process. It allows users to browse menus, place orders, and track delivery in real-time. Developed using React for the frontend, Node.js and Express for the backend, and MongoDB for data storage, the project integrates user authentication, cart functionality, and secure payment options. The app enhances user convenience and restaurant management, offering a seamless digital food ordering experience.</p>
+                <div class="video-container">
+                    <video controls>
+                        <source src="foodorder.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>

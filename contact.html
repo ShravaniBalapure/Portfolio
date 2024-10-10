@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .contact-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin-top: 80px; /* Adjust this margin if you have a fixed header */
+        }
+
+        .contact-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box input,
+        .input-box textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            background: #f9f9f9;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+
+        .input-box textarea {
+            min-height: 100px;
+        }
+
+        .input-box label {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            padding: 0 5px;
+            font-size: 16px;
+            color: #666;
+            transition: 0.3s;
+        }
+
+        .input-box input:focus + label,
+        .input-box input:valid + label,
+        .input-box textarea:focus + label,
+        .input-box textarea:valid + label {
+            top: -20px;
+            left: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .contact-container {
+            text-align: center; /* Center the content in the container */
+            margin-top: 40px; /* Space above contact information */
+        }
+
+        .contact-info {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0; /* Space between paragraphs */
+            font-size: 16px; /* Adjust font size */
+        }
+
+        .contact-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            font-size: 30px;
+            color: #333;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-icons a:hover {
+            color: #0073b1; /* LinkedIn blue color */
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            margin-top: auto; /* Pushes the footer to the bottom */
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none; margin-right: auto;">
+            <h1 style="color: red; font-family: 'Times New Roman', Times, serif; margin: 0; transition: color 0.3s;">Shravani</h1>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Portfolio</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+        </nav>
+        <a href="contact.html" class="contact">Contact Me</a>
+    </header>
+
+    <section>
+        <div class="contact-box">
+            <h2>Get in Touch</h2>
+            <form action="#" method="POST">
+                <div class="input-box">
+                    <input type="text" name="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="input-box">
+                    <textarea name="message" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-container">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:shravanibalapure@gmail.com">shravanibalapure@gmail.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1234567890</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/shravani-balapure-467430259" target="_blank">linkedin.com/in/shravani-balapure-467430259</a></p>
+            </div>
+
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/shravani-balapure-467430259" target="_blank" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Shravani Balapure. All rights reserved.</p>
+    </footer>
+</body>
+</html>

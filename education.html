@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.884);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .table-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin: 100px auto; /* Adjust for header */
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 20px;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <h1 style="color: red; font-family: 'Times New Roman', Times, serif; margin: 0; transition: color 0.3s;">Shravani</h1>
+        </a>
+        <nav class="navbar">
+            <a href="index.html" class="active">Portfolio</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+        </nav>
+        <a href="contact.html" class="contact">Contact Me</a>
+    </header>
+
+    <div class="table-container">
+        <h2>Education</h2>
+        <table>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year</th>
+            <th>Grade</th>
+          </tr>
+          <tr>
+            <td>Bachelor of Engineering</td>
+            <td>Sipna College of Engineering & Technology</td>
+            <td>2022-2026</td>
+            <td>Ongoing (Average CGPA: 9.5)</td>
+          </tr>
+          <tr>
+            <td>HSC</td>
+            <td>Brijlal Biyani Science College</td>
+            <td>2020-2022</td>
+            <td>80%</td>
+          </tr>
+          <tr>
+            <td>SSC</td>
+            <td>Bhawarilal Samra English High School</td>
+            <td>2019-2020</td>
+            <td>97%</td>
+          </tr>
+        </table>
+    </div>
+
+    <br><br>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
+

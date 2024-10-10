@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2024 Shravani Balapure. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/shravani-balapure-467430259" target="_blank" class="social-icon">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+                <i class='bx bxl-github'></i>
+            </a>
+            <a href="mailto:shravanibalapure@gmail.com" class="social-icon">
+                <i class='bx bxl-gmail'></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Method 3: Using JavaScript -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+</body>
+</html>
